@@ -8,8 +8,8 @@ The version of gtk I used in gtk4.
 
 To compile the code:
 
-    $gcc GUI_for_discoverer.c `pkg-config --cflags --libs gstreamer-1.0 gstreamer-pbutils-1.0 gtk4` -o GUI_for_discoverer
+    gcc GUI_for_discoverer.c `pkg-config --cflags --libs gstreamer-1.0 gstreamer-pbutils-1.0 gtk4` -o GUI_for_discoverer
 
 To run:
 
-    $./GUI_for_discoverer
+    ./GUI_for_discoverer
