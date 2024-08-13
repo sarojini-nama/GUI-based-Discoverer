@@ -49,7 +49,7 @@ static void on_button_store_log_file_clicked(GtkButton *button, gpointer user_da
 		username = getenv("LOGNAME");
 	}
 	
-	filepath = g_strdup_printf("/home/%s/Downloads/%s", username, filename);
+	filepath = g_strdup_printf("/home/%s/Downloads/%s.txt", username, filename);
 	
 	gtk_text_buffer_get_bounds(text_buffer, &start, &end);
 	
@@ -488,12 +488,12 @@ static void create_ui(GtkApplication *app, gpointer user_data)
 	
 	gtk_box_append(GTK_BOX(box_log_clear), button_log_clear);
 	
-	label_in_box_store_log_file = gtk_label_new("To save the discoverered logs currently present in text view\nEnter the filename with your preffered name... It will be stored in /Downloads");
+	label_in_box_store_log_file = gtk_label_new("To save the discoverered logs currently present in text view\nEnter the filename with your preffered name... It will be stored in /Downloads in .txt format");
 	gtk_widget_set_halign(label_in_box_store_log_file, GTK_ALIGN_START);
 	
 	//box_store_log_file
 	entry_store_log_file = gtk_entry_new();
-	gtk_entry_set_placeholder_text(GTK_ENTRY(entry_store_log_file), "Enter the filename and add .txt at the end...");
+	gtk_entry_set_placeholder_text(GTK_ENTRY(entry_store_log_file), "Enter the filename...");
 	
 	button_store_log_file = gtk_button_new_with_label("Download the file");
 	g_signal_connect(button_store_log_file, "clicked", G_CALLBACK(on_button_store_log_file_clicked), entry_store_log_file);
