@@ -13,3 +13,5 @@ To compile the code:
 To run:
 
     ./GUI_for_discoverer
+
+I have also included a working demo file with the name GUI_for_Discoverer.webm for your reference. It is available in the raw format, kindly download it.
